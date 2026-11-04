@@ -10,7 +10,7 @@ const path = require('path'), fs = require('fs');
   const b = await chromium.launch({args:['--allow-file-access-from-files','--force-device-scale-factor=1']});
   const p = await (await b.newContext({viewport:{width:1080,height:1920},deviceScaleFactor:1})).newPage();
   p.on('pageerror',e=>console.log('PAGEERROR',e.message)); p.on('console',m=>{ if(m.type()==='error') console.log('CONSOLE',m.text()); });
-  await p.goto('file://'+path.resolve(__dirname,'index.html'));
+  await p.goto('file://'+path.resolve(__dirname,process.env.PAGE||'index.html'));
   await p.evaluate(()=>window.__ready);
   for (let i=0;i<times.length;i++){
     await p.evaluate(t=>window.__seek(t), times[i]);
