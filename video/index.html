@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Paps — Motion design</title>
+<meta name="viewport" content="width=1080">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{--navy:#252E5E;--deep:#141a44;--cyan:#2E9BC6;--orange:#F7941D;--lime:#D8E52A;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0d1230;font-family:'Jost',sans-serif;color:#fff}
+#stage{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:hidden;background:var(--deep)}
+.scene,.tcol{position:absolute;inset:0;overflow:hidden}
+.tcol{background:var(--cyan)}
+.abs{position:absolute}
+.ub{font-family:'Ubuntu',sans-serif;font-weight:700;letter-spacing:-.01em}
+.mask{display:block;overflow:hidden;padding:.08em 0 .14em;margin:-.08em 0 -.14em}
+.mask>span{display:inline-block;will-change:transform}
+.card{position:absolute;border-radius:36px;overflow:hidden}
+.photo{position:absolute;background-size:cover;background-position:center}
+.pill{position:absolute;border-radius:999px;font-weight:600;display:flex;align-items:center;gap:16px;white-space:nowrap}
+.orb{position:absolute;border-radius:50%;filter:blur(60px)}
+</style></head>
+<body><div id="stage"></div>
+<script src="gsap.min.js"></script><script src="words.js"></script><script src="main.js"></script>
+</body></html>
